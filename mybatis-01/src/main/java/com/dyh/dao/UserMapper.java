@@ -11,7 +11,9 @@ public interface UserMapper {
     List<User> getUserList();
 
     //根據id查詢用戶
-    User getUerById(int id);
+    User getUserById(int id);
+
+    User getUserById2(Map<String, Object> map);
 
     //插入用戶
     int addUser(User user);

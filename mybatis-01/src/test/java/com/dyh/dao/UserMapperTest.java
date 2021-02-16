@@ -7,6 +7,7 @@ import org.junit.Test;
 
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class UserMapperTest {
     @Test
@@ -28,9 +29,20 @@ public class UserMapperTest {
     public void getUserById() {
         SqlSession sqlSession = MybatisUtils.getSqlSession();
         UserMapper mapper = sqlSession.getMapper(UserMapper.class);
-        User user = mapper.getUerById(1);
+        User user = mapper.getUserById(1);
         System.out.println(user);
 
+        sqlSession.close();
+    }
+
+    @Test
+    public void getUserById2() {
+        SqlSession sqlSession = MybatisUtils.getSqlSession();
+        UserMapper mapper = sqlSession.getMapper(UserMapper.class);
+        Map<String, Object> map = new HashMap();
+        map.put("helloid", 1);
+        mapper.getUserById2(map);
+        //sqlSession.commit();
         sqlSession.close();
     }
 
