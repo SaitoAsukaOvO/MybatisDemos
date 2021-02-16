@@ -16,6 +16,10 @@
         insert into mybatis.user (id, name, pwd) values (#{id}, #{name}, #{pwd})
     </insert>
 
+    <insert id="addUser2" parameterType="map">
+        insert into mybatis.user (id, pwd) values (#{userid}, #{password})
+    </insert>
+
     <update id="updateUser" parameterType="com.dyh.pojo.User">
         update mybatis.user set name=#{name},pwd=#{pwd} where id=#{id}
     </update>

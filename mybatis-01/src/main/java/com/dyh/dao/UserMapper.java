@@ -2,8 +2,8 @@ package com.dyh.dao;
 
 import com.dyh.pojo.User;
 
-import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 public interface UserMapper {
 
@@ -15,6 +15,9 @@ public interface UserMapper {
 
     //插入用戶
     int addUser(User user);
+
+    // 用map不需要知道數據庫裏有什麽，只需要查詢字段
+    int addUser2(Map<String, Object> map);
 
     //修改用戶
     int updateUser(User user);

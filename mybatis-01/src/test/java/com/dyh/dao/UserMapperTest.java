@@ -5,6 +5,7 @@ import com.dyh.util.MybatisUtils;
 import org.apache.ibatis.session.SqlSession;
 import org.junit.Test;
 
+import java.util.HashMap;
 import java.util.List;
 
 public class UserMapperTest {
@@ -61,6 +62,21 @@ public class UserMapperTest {
         SqlSession sqlSession = MybatisUtils.getSqlSession();
         UserMapper mapper = sqlSession.getMapper(UserMapper.class);
         int res = mapper.deleteUser(4);
+
+        //commit transaction
+        sqlSession.commit();
+        sqlSession.close();
+    }
+
+    @Test
+    public void addUser2() {
+        SqlSession sqlSession = MybatisUtils.getSqlSession();
+        UserMapper mapper = sqlSession.getMapper(UserMapper.class);
+        HashMap<String, Object> map = new HashMap<String, Object>();
+        map.put("userid", 5);
+        //map.put("userName", "nn");
+        map.put("password", "111");
+        mapper.addUser2(map);
 
         //commit transaction
         sqlSession.commit();
