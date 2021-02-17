@@ -26,4 +26,7 @@ public interface UserMapper {
 
     //刪除用戶
     int deleteUser(int id);
+
+
+    List<User> getUserLike(String value);
 }
