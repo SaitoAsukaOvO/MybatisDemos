@@ -3,24 +3,24 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <!--namespace綁定一個Dao/mapper接口-->
-<mapper namespace="com.dyh.dao.UserMapper">
-    <select id="getUserList" resultType="com.dyh.pojo.User">
+<mapper namespace="com.UserMapper">
+    <select id="getUserList" resultType="com.User">
         select * from mybatis.user;
     </select>
 
-    <select id="getUserById" parameterType="int" resultType="com.dyh.pojo.User">
+    <select id="getUserById" parameterType="int" resultType="com.User">
         select * from mybatis.user where id=#{id};
     </select>
 
-    <select id="getUserById2" parameterType="map" resultType="com.dyh.pojo.User">
+    <select id="getUserById2" parameterType="map" resultType="com.User">
         select * from mybatis.user where id=#{helloid} and name = #{name};
     </select>
 
-    <select id="getUserLike" resultType="com.dyh.pojo.User">
+    <select id="getUserLike" resultType="com.User">
         select * from mybatis.user where name like #{value}
     </select>
 
-    <insert id="addUser" parameterType="com.dyh.pojo.User">
+    <insert id="addUser" parameterType="com.User">
         insert into mybatis.user (id, name, pwd) values (#{id}, #{name}, #{pwd});
     </insert>
 
@@ -28,7 +28,7 @@
         insert into mybatis.user (id, pwd) values (#{userid}, #{password});
     </insert>
 
-    <update id="updateUser" parameterType="com.dyh.pojo.User">
+    <update id="updateUser" parameterType="com.User">
         update mybatis.user set name=#{name},pwd=#{pwd} where id=#{id};
     </update>
 

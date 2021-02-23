@@ -12,6 +12,8 @@
         <module>mybatis-01</module>
         <module>mybatis-02</module>
         <module>mybatis-03</module>
+        <module>mybatis-04</module>
+        <module>mybatis-004</module>
     </modules>
     <!--父工程-->
     <!--導入依賴-->

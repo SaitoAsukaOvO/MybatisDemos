@@ -5,9 +5,14 @@
 <configuration>
 <!--    引入web配置文件-->
     <properties resource="db.properties"/>
+    
+    <settings>
+    <!--<setting name="logImpl" value="STDOUT_LOGGING"/>-->
+        <setting name="logImpl" value="LOG4J"/>
+    </settings>
     <!-- 給實體類取別名-->
     <typeAliases>
-<!--        <typeAlias type="com.User" alias="User"/>-->
+<!--        <typeAlias type="com.dyh.pojo.User" alias="User"/>-->
         <package name="com.dyh.pojo"/>
     </typeAliases>
     <environments default="development">
@@ -23,7 +28,7 @@
     </environments>
     <mappers>
 <!--        <mapper resource="com/dyh/dao/UserMapper.xml"/>-->
-<!--        <mapper class="com.UserMapper"/>-->
+<!--        <mapper class="com.dyh.dao.UserMapper"/>-->
         <package name="com.dyh.dao"/>
     </mappers>
 </configuration>

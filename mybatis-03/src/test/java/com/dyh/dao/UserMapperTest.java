@@ -1,4 +1,4 @@
-package dao;
+package com.dyh.dao;
 
 import com.dyh.dao.UserMapper;
 import com.dyh.pojo.User;
