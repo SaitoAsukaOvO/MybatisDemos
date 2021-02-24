@@ -3,7 +3,7 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <!--namespace綁定一個Dao/mapper接口-->
-<mapper namespace="com.dyh.dao.UserMapper">
+<mapper namespace="com.UserMapper">
 <!--結果集映射-->
     <resultMap id="UserMap" type="User">
 <!--        column數據庫中字段 property實體類中的屬性-->

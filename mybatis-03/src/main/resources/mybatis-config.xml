@@ -7,7 +7,7 @@
     <properties resource="db.properties"/>
     <!-- 給實體類取別名-->
     <typeAliases>
-<!--        <typeAlias type="com.dyh.pojo.User" alias="User"/>-->
+<!--        <typeAlias type="com.User" alias="User"/>-->
         <package name="com.dyh.pojo"/>
     </typeAliases>
     <environments default="development">
@@ -23,7 +23,7 @@
     </environments>
     <mappers>
 <!--        <mapper resource="com/dyh/dao/UserMapper.xml"/>-->
-<!--        <mapper class="com.dyh.dao.UserMapper"/>-->
+<!--        <mapper class="com.UserMapper"/>-->
         <package name="com.dyh.dao"/>
     </mappers>
 </configuration>

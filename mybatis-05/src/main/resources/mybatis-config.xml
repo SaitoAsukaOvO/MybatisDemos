@@ -5,11 +5,7 @@
 <configuration>
 <!--    引入web配置文件-->
     <properties resource="db.properties"/>
-    
-    <settings>
-    <!--<setting name="logImpl" value="STDOUT_LOGGING"/>-->
-        <setting name="logImpl" value="LOG4J"/>
-    </settings>
+
     <!-- 給實體類取別名-->
     <typeAliases>
 <!--        <typeAlias type="com.User" alias="User"/>-->
@@ -26,9 +22,9 @@
             </dataSource>
         </environment>
     </environments>
+
+<!--    绑定接口-->
     <mappers>
-<!--        <mapper resource="com/dyh/dao/UserMapper.xml"/>-->
-<!--        <mapper class="com.UserMapper"/>-->
-        <package name="com.dyh.dao"/>
+        <mapper class="com.dyh.dao.UserMapper"/>
     </mappers>
 </configuration>
