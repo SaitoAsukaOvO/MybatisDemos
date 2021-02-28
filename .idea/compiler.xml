@@ -10,9 +10,10 @@
         <module name="mybatis-02" />
         <module name="mybatis-03" />
         <module name="mybatis-05" />
-        <module name="mybatis-06" />
-        <module name="mybatis-004" />
         <module name="mybatis-01" />
+        <module name="mybatis-06" />
+        <module name="mybatis-07" />
+        <module name="mybatis-004" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
