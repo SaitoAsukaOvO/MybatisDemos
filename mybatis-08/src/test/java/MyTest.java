@@ -2,6 +2,7 @@ import com.dyh.dao.BlogMapper;
 import com.dyh.pojo.Blog;
 import com.dyh.util.IDUtils;
 import com.dyh.util.MybatisUtils;
+import org.apache.ibatis.cache.Cache;
 import org.apache.ibatis.session.SqlSession;
 import org.junit.Test;
 
@@ -90,6 +91,7 @@ public class MyTest {
         ArrayList<String> ids = new ArrayList<String>();
         ids.add("be97768b15204849a98556f1be6c8f32");
         ids.add("050d9d4fbcb8493ead78f8b983eaa081");
+
         map.put("ids",ids);
         List<Blog> blogs = mapper.queryBlogForEach(map);
         for (Blog blog : blogs) {
