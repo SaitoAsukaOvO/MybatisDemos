@@ -1,6 +1,6 @@
-1. Mybatis
+# Mybatis
 
-## Mybatis项目创建流程（查询为例子）：
+## 1. Mybatis项目创建流程（查询为例子）：
 
 ### 环境搭建
 
@@ -1000,4 +1000,41 @@ List<Blog> queryBlogForEach(Map map);
 
 
 ## 10. 自定义缓存 Ehcache
+
+### 导入依赖：pom.xml
+
+```xml
+        <dependency>
+            <groupId>org.mybatis.caches</groupId>
+            <artifactId>mybatis-ehcache</artifactId>
+            <version>1.1.0</version>
+        </dependency>
+```
+
+### mapper下配置：
+
+```xml
+<cache type="org.mybatis.caches.ehcache.EhcacheCache"/>
+```
+
+### resource下创建ehcache.xml:
+
+```xml
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dyh.dao.UserMapper">
+
+    <cache type="org.mybatis.caches.ehcache.EhcacheCache"/>
+
+    <select id="queryUserById" resultType="user">
+        select * from mybatis.user where id=#{id}
+    </select>
+    
+    <update id="updateUser" parameterType="user">
+        update mybatis.user set name=#{name}, pwd=#{pwd} where id = #{id};
+    </update>
+</mapper>
+```
 
