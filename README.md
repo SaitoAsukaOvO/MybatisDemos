@@ -2,7 +2,7 @@
 
 https://mybatis.org/mybatis-3/zh/index.html
 
-view Mybatis_Guide.md to get a detailed document
+view Mybatis_Guide.md (https://github.com/SaitoAsukaOvO/MybatisDemos/blob/master/Mybatis_Guide.md) to get a detailed document
 
 ## demo 01: 
 First mybatis application -- config and print all data of a user table
